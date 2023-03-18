@@ -1,0 +1,56 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="user">
+    <view class="user_img">
+      <image src="{{lis.avatarUrl}}" mode=""/>
+    </view>
+    <view class="txt">
+      基本资料
+    </view>
+    <view class="cont">
+      <view class="le">
+        姓名
+      </view>
+      <view class="re">
+        <input type="text" value="{{lis.nickName}}"/>
+      </view>
+    </view>
+    <view class="cont">
+      <view class="le">
+        性别
+      </view>
+      <view class="re">
+        <view class="section">
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+              <input type="text" value="{{array[lis.gender]}}"/>
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="cont">
+      <view class="le">
+        介绍
+      </view>
+      <view class="re">
+        <input type="text" value="{{user_js}}"/>
+      </view>
+    </view>
+    <view class="pe">
+        照片墙
+    </view>
+    <view class="photo">
+      <view class="flex-wrap">
+      	 <view class="iconfont icon-camera" bindtap='upload' wx:if="{{imgArr.length < 6}}">
+            <image class="line" src="../../images/icon/line.png" mode=""/>
+         </view>
+      		 <view class="relative" wx:for="{{imgArr}}" wx:key="item">
+	 	 	      <text class="iconfont icon-guanbi color-style" data-index='{{index}}' catchtap='deleteImg'>删除</text>
+		        <image mode="aspectFit" src="{{item}}" bindtap="preview" data-src="{{item}}" alt="图片"/>
+      	 </view>
+      </view>
+    </view>
+    <button class="btn">提交</button>
+  </view>
+</view>

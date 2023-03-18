@@ -1,0 +1,54 @@
+<!--pages/hzjm/hzjm.wxml-->
+<view class="container">
+  <view class="content">
+    <view class="contact">
+      <view class="fh" style="margin-top: {{titleBottom}}px;">
+        <image bindtap="getut" src="../../images/fh.png" mode=""/>
+      </view>
+      <view class="header_pic" >
+        <image src="https://cclove.club/xcx/hzjm.png" mode="widthFix"/>
+      </view>
+      <form bindsubmit="submit">
+        <view class="cont">
+        <view class="tit">
+          欢迎合作
+        </view>
+        <view class="item">
+          <view class="tit_name">
+            姓名
+          </view>
+          <input type="text" name="username" placeholder="您的称呼"/>
+        </view>
+        <view class="item">
+          <view class="tit_name">
+            联系方式
+          </view>
+          <input type="text" name="lx" placeholder="您的联系方式"/>
+        </view>
+        <view class="item">
+          <view class="tit_name">
+            性别
+          </view>
+          <view class="rad">
+            <radio-group name="six" class="rada" bindchange="radioChange">
+              <label class="weui-cell" wx:for="{{items}}" wx:key="index">
+                <view class="weui-cell__hd">
+                  <radio color="#508cf5" value="{{item.value}}"/>
+                </view>
+                <view class="weui-cell__bd">{{item.name}}</view>
+               </label>
+            </radio-group>
+          </view>
+        </view>
+        <view class="item">
+          <view class="tit_name">
+            意向
+          </view>
+          <textarea value="" name="content" placeholder="请输入你的合作意向"/>
+        </view>
+        <button form-type="submit" class="btn">提交</button>
+      </view>
+      </form>
+    </view>
+  </view>
+</view>

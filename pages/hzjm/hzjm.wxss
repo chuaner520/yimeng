@@ -1,0 +1,89 @@
+/* pages/hzjm/hzjm.wxss */
+.content{
+  width: 100%;
+  height: 300px;
+  background-color: #508cf5;
+}
+.fh{
+  width: 100%;
+  height: 80rpx;
+  background-color: #508cf5;
+  display: flex;
+  align-items: center;
+}
+.fh image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 2%;
+}
+.contact{
+  width: 100%;
+}
+.header_pic{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #508cf5;
+}
+.header_pic image{
+  max-width: 50%;
+  max-height: 100%;
+}
+.cont{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin-top: -10%;
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  overflow: hidden;
+  padding: 20rpx 0;
+}
+.tit{
+  width: 90%;
+  margin: auto;
+  margin-top: 100rpx;
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+.item{
+  width: 90%;
+  padding: 10rpx 0;
+  margin: 20rpx auto;
+}
+.item input{
+  background-color: #f5f5f5;
+  width: 95%;
+  padding: 0 10px;
+  height: 60rpx;
+  font-size: 14px;
+  border-radius: 10rpx;
+}
+.tit_name{
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(58, 57, 57);
+  margin: 15rpx 0;
+}
+.weui-cell{
+  display: flex;
+  margin: 0 20rpx;
+}
+.rada{
+  display: flex;
+}
+textarea{
+  width: 95%;
+  height: 300rpx;
+  background-color: #f5f5f5;
+  border-radius: 10rpx;
+  padding: 10px;
+}
+.btn{
+  background-color: royalblue;
+  color: white;
+  box-shadow: 3px 3px 10px royalblue;
+}

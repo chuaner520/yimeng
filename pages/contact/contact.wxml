@@ -1,0 +1,31 @@
+<!--pages/contact/contact.wxml-->
+<view class="container">
+  <view class="con">
+    <view class="logo_pic">
+      <image src="{{ban_pic}}" mode="widthFix"/>
+    </view>
+    <view class="bbh">
+      V {{bbh}}
+    </view>
+    <view class="tit_name">
+      {{name}}
+    </view>
+    <view class="js">
+      {{js}}
+    </view>
+    <view class="num">
+      <text>
+        手机：{{number}}
+      </text>
+      <text>
+        微信：{{wx}}
+      </text>
+      <text>
+        邮箱：{{email}}
+      </text>
+    </view>
+    <button open-type="contact" class="contact">
+      联系客服
+    </button>
+  </view>
+</view>

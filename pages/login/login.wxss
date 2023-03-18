@@ -1,0 +1,30 @@
+/* pages/login/login.wxss */
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://cclove.club/xcx/login.png");
+  background-size: 100% 100%;
+  position: relative;
+}
+.check_box{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #3D3D3C;
+  text-indent: 1em;
+}
+.name{
+  font-size: 1.8rem;
+}
+.btn{
+  background-color: #FFCD06;
+  color: white;
+  text-indent: 0;
+  font-weight: 400;
+  filter: drop-shadow(3px 3px 10px #FFCD06);
+  margin: 100rpx 0;
+}

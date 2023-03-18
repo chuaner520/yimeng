@@ -1,0 +1,12 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="check_box">
+    <view class="title">
+      忆梦欢迎您
+      <view class="name">
+        请授权登陆
+      </view>
+    </view>
+    <button bindtap="login"  class="btn">授权登陆</button>
+  </view>
+</view>

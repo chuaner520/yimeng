@@ -1,0 +1,54 @@
+<!--pages/rz/rz.wxml-->
+<view class="container">
+  <view class="header">
+    <image src="https://cclove.club/xcx/hzjm.png" mode=""/>
+  </view>
+  <view class="cont">
+    <view class="contn">
+      <view class="scann">
+        您的姓名
+      </view>
+      <input type="text" placeholder="姓名"/>
+    </view>
+    <view class="contn">
+      <view class="scann">
+        身份证
+      </view>
+      <input type="text" placeholder="请填写身份证号码"/>
+    </view>
+    <view class="contn">
+      <view class="scann">
+        上传身份证<text>（身份证正面）</text>
+      </view>
+      <view class="flex-wrap">
+      	 <view class="iconfont icon-camera" bindtap='upload' wx:if="{{imgArr.length < 1}}">
+            <image class="line" src="../../images/icon/line.png" mode=""/>
+         </view>
+      		 <view class="relative" wx:for="{{imgArr}}" wx:key="item">
+	 	 	      <text class="iconfont icon-guanbi color-style" data-index='{{index}}' catchtap='deleteImg'>删除</text>
+		        <image mode="aspectFit" src="{{item}}" bindtap="preview" data-src="{{item}}" alt="图片"/>
+      	 </view>
+      </view>
+    </view>
+    <view class="contn">
+      <view class="scann">
+        上传学生证<text>（学生证正面）</text>
+      </view>
+      <view class="flex-wrap">
+      	 <view class="iconfont icon-camera" bindtap='uploads' wx:if="{{sc_img.length < 1}}">
+            <image class="line" src="../../images/icon/line.png" mode=""/>
+         </view>
+      		 <view class="relative" wx:for="{{sc_img}}" wx:key="item">
+	 	 	      <text class="iconfont icon-guanbi color-style" data-index='{{index}}' catchtap='deleteImgs'>删除</text>
+		        <image mode="aspectFit" src="{{item}}" bindtap="previews" data-src="{{item}}" alt="图片"/>
+      	 </view>
+      </view>
+    </view>
+    <view class="contn">
+      <view class="scann">
+        上传规范<text>（学生证正面/录取通知书/无任何破损遮挡）</text>
+      </view>
+    </view>
+    <button class="btn">提交</button>
+  </view>
+</view>

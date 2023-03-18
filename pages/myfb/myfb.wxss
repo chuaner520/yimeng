@@ -1,92 +1,32 @@
-/* pages/lost/lost.wxss */
-.header_top{
-  width: 100%;
-  height: 400rpx;
-  background-color: royalblue;
-  position: relative;
-  animation: ak ease 1s;
-}
-@keyframes ak{
-  0%{
-    height: 200rpx;
-    opacity: 0;
-  }
-}
-.header_top::before{
-  position: absolute;
-  bottom: -50rpx;
-  content: "";
-  width: 100%;
-  height: 80rpx;
-  border-radius: 0 0 50% 50%;
-  background-color: royalblue;
-}
-.fh{
-  position: fixed;
-  z-index: 1111;
-  width: 70rpx;
-  height: 70rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(57, 60, 241);
-  margin-left: 2%;
-  border-radius: 10rpx;
-}
-.fh image{
-  width: 40rpx;
-  height: 40rpx;
-}
-.banner{
-  width: 95%;
-  height: 300rpx;
-  position: absolute;
-  box-shadow: 3rpx 3rpx 10rpx royalblue;
-  bottom: -25%;
-  left: 50%;
-  border-radius: 20rpx;
-  overflow: hidden;
-  transform: translateX(-50%);
-}
-.banner image{
-  width: 100%;
-  height: 100%;
-}
-.content{
-  width: 100%;
-  padding: 10rpx 0;
-  margin-top: 100rpx;
-}
+/* pages/myfb/myfb.wxss */
 .tab{
   width: 100%;
-  margin-left: 20rpx;
   height: 80rpx;
   display: flex;
-  align-items: center;
-}
-.tab_item{
-  margin-right: 20rpx;
-  padding: 10rpx 15rpx;
-  border-radius: 10rpx;
-}
-.active{
-  background-color: royalblue;
-  color: white;
-}
-.swiper{
-  width: 100%;
-  height: 100vh;
-  overflow-y: scroll;
+  overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 }
-.swiper swiper-item{
+.tab_item{
+  padding: 0 15rpx;
+  white-space: nowrap;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-right: 30rpx;
+}
+.active{
+  padding: 0 15rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid royalblue;
+  white-space: nowrap;
+}
+.cont_lo{
+  width: 95%;
+  height: 100vh;
+  margin: 30rpx 0;
+}
+.cont_lo swiper{
   width: 100%;
   height: 100%;
-}
-.cont{
-  width: 95%;
-  margin: auto;
-  padding: 10rpx 0;
 }
 .card_{
   width: 100%;
@@ -99,7 +39,6 @@
 .user_info{
   width: 100%;
   padding: 10rpx 0;
-  position: relative;
   display: flex;
 }
 .left_userinfo{
@@ -122,7 +61,7 @@
   font-weight: bold;
 }
 .top_user .qx{
-  background-color: royalblue;
+  background-color: #2c5df1;
   font-size: 24rpx;
   display: flex;
   padding: 3rpx 10rpx;
@@ -189,36 +128,54 @@
   height: 40rpx;
   margin-right: 10rpx;
 }
-.ad_top,.ad_add{
-  background-color: rgb(57, 60, 241);
+.con{
+  width: 100%;
+  padding: 20rpx 0;
+  background-color: white;
+  box-shadow: 2px 2px 10px rgb(243, 243, 243);
+  border-radius: 10rpx;
+  margin: 20rpx 0;
 }
-.sq_icon::before{
-  content: "丢";
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 24rpx;
-  width: 60rpx;
-  height: 60rpx;
-  border-radius: 100%;
-  border: 2rpx solid royalblue;
+.cn_k{
+  width: 95%;
+  margin: auto;
   display: flex;
-  color: royalblue;
+  align-items: center;
+  font-size: 12px;
+  color: #1977F3;
+}
+.cn_k image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.order_lis{
+  width: 95%;
+  padding: 10rpx 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ddh{
+  font-size: 18px;
+  color: #404040;
+  font-weight: bold;
+}
+.address{
+  font-size: 12px;
+  color: rgb(78, 78, 78);
+}
+.next{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  background-color: #a7cdff;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.ds_icon::before{
-  content: "拾";
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 24rpx;
-  width: 60rpx;
-  height: 60rpx;
-  border-radius: 100%;
-  border: 2rpx solid royalblue;
-  display: flex;
-  color: royalblue;
-  justify-content: center;
-  align-items: center;
+.next image{
+  max-width: 70%;
+  max-height: 70%;
 }

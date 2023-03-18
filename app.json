@@ -8,7 +8,13 @@
     "pages/glove/glove",
     "pages/lost/lost",
     "pages/help/help",
-    "pages/mp/mp"
+    "pages/mp/mp",
+    "pages/myfb/myfb",
+    "pages/hzjm/hzjm",
+    "pages/contact/contact",
+    "pages/login/login",
+    "pages/rz/rz",
+    "pages/user/user"
   ],
   "window":{
     "backgroundTextStyle":"light",

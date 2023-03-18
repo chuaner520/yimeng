@@ -1,1 +1,154 @@
 /* pages/my/my.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#469cf3,#F5FAFF,white,white);
+}
+.header{
+  width: 100%;
+}
+.title{
+  width: 95%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: auto;
+  color: white;
+}
+.user_info{
+  width: 95%;
+  height: auto;
+  margin: auto;
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user_img{
+  width: 120rpx;
+  height: 120rpx;
+  overflow: hidden;
+  border-radius: 100%;
+  margin-right: 20rpx;
+  background-color: #f5f5f5;
+}
+.user_img image{
+  width: 100%;
+  height: 100%;
+}
+.name{
+  font-weight: bold;
+  font-size: 1rem;
+}
+.dt{
+  font-size: 12px;
+  color: rgb(65, 65, 65);
+}
+.sz{
+  width: 50rpx;
+  height: 50rpx;
+}
+.sz image{
+  width: 100%;
+  height: 100%;
+}
+.tit_na{
+  display: flex;
+  align-items: center;
+}
+.banner{
+  width: 95%;
+  padding: 20rpx 0;
+  height: 60rpx;
+  /* background-color: rgb(24, 24, 24); */
+  background: linear-gradient(#4F4D65,#171C2B);
+  margin: 20rpx auto;
+  border-radius: 20rpx;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.lef_im{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.lef_im image{
+  width: 100rpx;
+  height: 100%;
+}
+.text{
+  min-width: 200rpx;
+  color: white;
+}
+.go{
+  padding: 10rpx 15rpx;
+  background-color: royalblue;
+  border-radius: 10rpx;
+  color: white;
+  margin-right: 20rpx;
+}
+.content{
+  width: 95%;
+  margin:  auto;
+  margin-top: 30rpx;
+}
+.fun{
+  width: 100%;
+  padding: 10rpx 0;
+  background-color: white;
+  box-shadow: 3px 3px 10px rgb(231, 231, 231);
+  border-radius: 20rpx;
+}
+.aler{
+  width: 95%;
+  padding: 10rpx 0;
+  border-bottom: 1px solid rgb(223, 223, 223);
+  margin: auto;
+  color: #333;
+}
+.con{
+  width: 95%;
+  padding: 10rpx 0;
+  margin: 20rpx auto;
+}
+.con_list{
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+  justify-content: space-between;
+}
+.icon_che{
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 16px;
+}
+.icon_che image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.gt{
+  width: 30rpx;
+  height: 30rpx;
+}
+.gt image{
+  width: 100%;
+  height: 100%;
+}
+.ban{
+  width: 100%;
+  height: 300rpx;
+  margin: 50rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ban image{
+  max-width: 100%;
+  max-height: 100%;
+}

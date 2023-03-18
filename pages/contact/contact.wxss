@@ -1,0 +1,46 @@
+/* pages/contact/contact.wxss */
+.con{
+  width: 95%;
+  padding: 20rpx 0;
+  border-radius: 20rpx;
+  border: 1px solid rgb(245, 245, 245);
+}
+.logo_pic{
+  width: 200rpx;
+  margin: auto;
+  margin-top: 200rpx;
+}
+.logo_pic image{
+  width: 100%;
+}
+.bbh,.tit_name{
+  text-align: center;
+}
+.bbh{
+  margin: 10rpx 0;
+  color: #ccc;
+}
+.tit_name{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: rgb(65, 65, 65);
+}
+.js{
+  width: 90%;
+  font-size: 1rem;
+  color: rgb(34, 34, 34);
+  margin: 10rpx auto;
+  font-size: 14px;
+}
+.num{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  color: rgb(63, 63, 63);
+}
+.contact{
+  background-color: royalblue;
+  color: white;
+  margin: 20rpx 0;
+  box-shadow: 3px 3px 10px royalblue;
+}

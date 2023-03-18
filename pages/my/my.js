@@ -1,66 +1,130 @@
 // pages/my/my.js
 Page({
-
   /**
-   * 页面的初始数据
+   * 组件的初始数据
    */
   data: {
-
+    navBarHeight: 0, 
+    titleBottom: 0,
+    ad:false,
+    fun:[
+      {
+        id:'1',
+        nameL:'我已发布',
+        pic:'../../images/icon/myfb.png',
+        address:"../myfb/myfb"
+      },{
+        id:'2',
+        nameL:'合作交流',
+        pic:'../../images/icon/dyzx.png',
+        address:"../hzjm/hzjm"
+      },{
+        id:'3',
+        nameL:'联系我们',
+        pic:'../../images/icon/contact.png',
+        address:"../contact/contact"
+      },{
+        id:'5',
+        nameL:'退出登陆',
+        pic:'../../images/icon/loginout.png',
+      }
+    ],
+    ban_pic:'http://cclove.club/xcx/img.png',
+    userInfo:[
+    ],
+    log:true
   },
 
   /**
-   * 生命周期函数--监听页面加载
+   * 组件的方法列表
    */
-  onLoad(options) {
-
+  getuse(){
+    wx.navigateTo({
+      url: '../user/user',
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  get_rz(){
+    wx.navigateTo({
+      url: '../rz/rz',
+    })
   },
+  tz:function(e){
+    var that=this
+    let url= e.currentTarget.dataset.indd;
+    if(url+1<that.data.fun.length){
+      wx.navigateTo({
+        url: that.data.fun[url].address,
+      })
+    }
+    else{
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
+    }
+    if(url==3){
+      wx.removeStorage({
+        key: 'user',
+        success (res) {
+            that.onShow()
+        }
+      })
+      wx.removeStorage({
+        key: 'openid',
+        success (res) {
+        }
+      })
+      wx.removeStorage({
+        key: 'sessionkey',
+        success (res) {
+        }
+      })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
+  getHeights() {
+    let that = this
+    const menuButtonInfo = wx.getMenuButtonBoundingClientRect();
+    const systemInfo = wx.getSystemInfoSync();
+    this.setData({
+      navBarHeight: systemInfo.statusBarHeight + 44,
+      titleBottom: systemInfo.statusBarHeight
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
+  geth(){
+    wx.navigateTo({
+      url: '../hzjm/hzjm',
+    })
   },
+  onLoad(){
+    var time=wx.getStorage({
+      key:'time',
+      success:function (res){
+        var timestamp = Date.parse(new Date());  
+        timestamp = timestamp / 1000;  
+        var so=timestamp<res.data
+        if(so){
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
+        } 
+        else{
+          wx.clearStorage()
+        } 
+      }
+    })
+    this.getHeights();
+    let user = wx.getStorageSync('user')
+    if(user==""){
+      wx.navigateTo({
+        url: '../login/login',
+      })
+    }
+    this.setData({
+      userInfo: user
+    })
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  onShow:function(){
+    var that=this
+    var data=[]//定义一个空数组
+    that.setData({
+      btnaswear: data,
+      updatalist1: data
+    })
+    that.onLoad()
   }
 })

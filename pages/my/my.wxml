@@ -1,2 +1,62 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="container">
+  <view class="header">
+    <view class="title" style="margin-top: {{titleBottom}}px;">
+      我的
+    </view>
+    <view class="user_info">
+      <view class="tit_na">
+        <view class="user_img">
+          <image src="{{userInfo.avatarUrl}}" mode=""/>
+        </view>
+        <view class="le">
+          <view class="name">
+           {{userInfo.nickName}}
+          </view>
+          <view class="dt">
+            时间会给你想要的一切
+          </view>
+        </view>
+      </view>
+      <view class="sz">
+          <image bindtap="getuse" src="../../images/icon/xiugai.png" mode=""/>
+      </view>
+    </view>
+    <view class="banner">
+      <view class="lef_im">
+        <image src="https://cclove.club/xcx/vip.png" mode=""/>
+        <view class="text">
+          <view class="txt">
+            跑腿认证
+          </view>
+        </view>
+      </view>
+      <view class="go" bindtap="get_rz">
+          立即认证
+      </view>
+    </view>
+    <view class="content">
+      <view class="fun">
+        <view class="aler">
+          其他服务
+        </view>
+        <view class="con">
+          <view class="con_list" bindtap="tz" data-pid="{{item.nameL}}" data-indd="{{index}}" wx:for="{{fun}}" wx:key="id">
+            <view class="icon_che">
+              <image src="{{item.pic}}" mode=""/>
+              <view class="na">
+                {{item.nameL}}
+              </view>
+            </view>
+            <view class="gt">
+              <image src="../../images/icon/nexa.png" mode=""/>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="ban">
+        <image bindtap="geth" src="{{ban_pic}}" mode=""/>
+      </view>
+    </view>
+  </view>
+</view>
