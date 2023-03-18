@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/my/my",
+    "pages/shequ/shequ",
+    "pages/shudong/shudong",
+    "pages/glove/glove",
+    "pages/lost/lost",
+    "pages/help/help",
+    "pages/mp/mp"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "忆梦",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color":"#cccccc",
+    "selectedColor": "#454545",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "/images/index.png",
+      "selectedIconPath": "/images/indexsec.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/my/my",
+      "iconPath": "/images/my.png",
+      "selectedIconPath": "/images/mysec.png",
+      "text": "我的"
+    }]
+  },
+  "usingComponents": {},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading":"requiredComponents"
+}
