@@ -1,0 +1,173 @@
+/* pages/shudong/shudong.wxss */
+.header_top{
+  width: 100%;
+  height: 70vh;
+  background-image: url(https://cclove.club/yimeng/banner.png);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  position: relative;
+}
+.header_top::before{
+  position: absolute;
+  right: 15%;
+  bottom: 15%;
+  background-color: rgba(255,255,255,0.3);
+  font-size: 24rpx;
+  padding: 3rpx 10rpx;
+  border-radius: 10rpx;
+  content: "给我听听你的故事吧～";
+  animation: texts ease 2s;
+  white-space: nowrap;
+}
+@keyframes texts{
+  0%{
+    transform: scale(0.0);
+    overflow: hidden;
+  }
+}
+.top_header {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  height: 80rpx;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  left: 3%;
+}
+.left_icon{
+  border-radius: 10rpx;
+  background-color: rgb(65, 225, 185);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left_icon .logo_icon{
+  padding: 10rpx 20rpx;
+}
+.left_icon image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.center{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300rpx;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 20rpx;
+}
+.center input{
+  font-size: 24rpx;
+  padding: 0 20rpx;
+  text-align: center;
+}
+.content{
+  width: 95%;
+  padding: 10rpx 0;
+  margin-top: 10rpx;
+}
+.card_{
+  width: 100%;
+  padding: 20rpx 0;
+}
+.card_box{
+  padding: 10rpx 0;
+  width: 100%;
+}
+.user_info{
+  width: 100%;
+  padding: 10rpx 0;
+  display: flex;
+}
+.left_userinfo{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.left_userinfo image{
+  width: 100%;
+  height: 100%;
+}
+.top_user{
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+}
+.username{
+  font-size: 25rpx;
+  font-weight: bold;
+}
+.top_user .qx{
+  background-color: rgb(65, 225, 185);
+  font-size: 24rpx;
+  display: flex;
+  padding: 3rpx 10rpx;
+  color: white;
+  align-items: center;
+  margin: 0 10rpx;
+  border-radius: 10rpx;
+}
+.card_timer{
+  font-size: 20rpx;
+  color: gray;
+  margin-left: 10rpx;
+}
+.con_box{
+  width: 95%;
+  margin: auto;
+  padding: 10rpx 0;
+}
+.con_text{
+  font-weight: bold;
+}
+.card_pic{
+  padding: 10rpx 0;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 37rpx;
+  grid-row-gap: 20rpx;
+  justify-items: center;
+}
+.card_pic image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  object-fit: cover;
+}
+.card_more{
+  padding: 10rpx 0 20rpx 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f2f2f2;
+}
+.lef_more{
+  font-size: 18rpx;
+  color: gray;
+  padding: 5rpx 10rpx;
+  background-color: rgba(172, 172, 172, 0.2);
+  border-radius: 20rpx;
+}
+.ref_more,.item_icona{
+  display: flex;
+  align-items: center;
+}
+.item_icona{
+  font-size: 20rpx;
+  color: gray;
+  margin: 0 10rpx;
+}
+.item_icona image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.ad_top,.ad_add{
+  background-color: rgb(65, 225, 185);
+}

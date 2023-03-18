@@ -1,0 +1,66 @@
+<!--pages/mp/mp.wxml-->
+<view class="container">
+  <view class="header_top">
+    <view class="top_title" style="margin-top: {{titleBottom}}px;">
+      <view class="hf" bindtap="getinde">
+        <image src="../../images/fh.png" mode=""/>
+      </view>
+      <view class="sf_mp">
+        <image src="../../images/icon/sf.png" mode=""/>
+        <text>校园名片</text>
+      </view>
+    </view>
+    <view class="mp">
+      <view class="so">
+        <view class="top_user">
+          <view class="user_info">
+           <view class="lef">
+            <view class="username">
+              文艺
+            </view>
+            <view class="title">
+              时代会变化你永远是唯一
+            </view>
+            <view class="address">
+              重庆
+            </view>
+           </view>
+           <view class="ref">
+            <image src="https://cclove.club/img/2.jpg" mode="aspectFit"/>
+           </view>
+          </view>
+        </view>
+        <view class="bottom_bu">
+          <view class="le">
+            入驻 <text>220天</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="content">
+    <view class="title_txt">
+      个人简介
+    </view>
+    <view class="jj">
+      你们好我是文艺，欢迎使用忆梦服务平台。感兴趣可以自取本系统的源码。
+    </view>
+    <view class="title_txt scol">
+      我的学校
+    </view>
+    <view class="my_school">
+      <view class="lef_sc">
+        <image src="https://cclove.club/xcx/user.jpg" mode=""/>
+      </view>
+      <view class="ref_sc">
+        <view class="sc_name">
+          重庆**学校
+        </view>
+        <view class="sc_add">
+          重庆市万州
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="share" open-type="share">分享名片</button>
+</view>

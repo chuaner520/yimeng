@@ -1,0 +1,12 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <view class="welcome_logo">
+    <view class="logo_info">
+      <image src="../../images/logo.png" mode="widthFix" />
+    </view>
+    <text class="demo_name">忆梦校园服务平台</text>
+    <view class="progress-box">
+      <progress percent="{{loading}}" activeColor="royalblue"  bindactiveend="timeUpdate"  active stroke-width="3" />
+    </view>
+  </view>
+</view>

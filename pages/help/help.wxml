@@ -1,0 +1,46 @@
+<!--pages/help/help.wxml-->
+<view class="container">
+  <view class="header_top">
+    <view class="fh" bindtap="getinde" style="top: {{titleBottom}}px;">
+      <image src="../../images/fh.png" mode="aspectFill" />
+    </view>
+    <view class="banner">
+      <image src="https://cclove.club/xcx/banner.png" mode="aspectFill  " />
+    </view>
+  </view>
+  <view class="content">
+    <view class="zwnr" wx:if="{{error}}">
+      <image src="https://cclove.club/xcx/zwnr.png" mode="widthFix" />
+      <text>暂无内容</text>
+    </view>
+    <view class="con" wx:for="{{help}}" wx:key="index">
+      <view class="cn_k">
+        <image src="../../images/icon/cn.png" mode=""/>
+        快递驿站
+      </view>
+      <view class="order_lis">
+        <view class="lef_lis">
+          <view class="ddh">
+            {{item.ddh}}
+          </view>
+          <view class="address">
+            {{item.address}}
+          </view>
+        </view>
+        <view class="rig_lis">
+          <view class="next" data-indd="{{item.id}}" bindtap="oncl">
+            <image src="../../images/icon/next.png" mode=""/>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="d_fomr">
+    <view class="ad_top" bindtap="goTop" wx:if="{{adtop}}">
+      <image src="../../images/icon/adtop.png" mode="" />
+    </view>
+    <view class="ad_add">
+      <image src="../../images/icon/add.png" mode="" />
+    </view>
+  </view>
+</view>

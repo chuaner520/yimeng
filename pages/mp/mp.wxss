@@ -1,0 +1,204 @@
+/* pages/mp/mp.wxss */
+page{
+  background-color: #f5fbf8;
+}
+.header_top{
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+  background-color: royalblue;
+}
+.header_top::after{
+  width: 100%;
+  height: 58rpx;
+  position: absolute;
+  left: 0%;
+  bottom: -50rpx;
+  z-index: -1;
+  content: '';
+  border-radius: 0 0 50% 50%;
+  background-color: royalblue;
+}
+.top_title{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.hf{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 10rpx;
+}
+.hf image{
+  width: 100%;
+  height: 100%;
+}
+.sf_mp{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sf_mp text{
+  font-weight: bold;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sf_mp image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.mp{
+  width: 90%;
+  height: 400rpx;
+  border-radius: 30rpx;
+  margin: auto;
+  margin-top: 50rpx;
+  position: relative;
+  background: repeating-linear-gradient(rgb(233, 226, 226),white,white);
+}
+.mp::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255,255,255,0.2);
+  height: 100%;
+  border-radius: 30rpx;
+  transform: rotate(-4deg);
+}
+.so{
+  width: 100%;
+  height: 400rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.top_user{
+  width: 100%;
+  height: 330rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.user_info{
+  width: 85%;
+  margin: auto;
+  height: 200rpx;
+  display: flex;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+.lef{
+  line-height: 40rpx;
+}
+.username{
+  font-size: 35rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  color: #333;
+}
+.title,.address{
+  font-size: 25rpx;
+  color: #b1b1b1;
+}
+.ref{
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  height: 130rpx;
+  border-radius: 100%;
+  box-shadow: 5px 5px 10px rgb(148, 172, 245);
+}
+.ref image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 100%;
+}
+.bottom_bu{
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+.le{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(74, 119, 252);
+  color: #dbdbdb;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  text-indent: 1em;
+  font-weight: bold;
+}
+.le text{
+  text-indent: 0.25em;
+  color: white;
+}
+.content{
+  width: 90%;
+  margin-top: 260rpx;
+}
+.title_txt{
+  font-size: 28rpx;
+  color: #333;
+}
+.jj{
+  padding: 20rpx 0;
+  font-size: 26rpx;
+}
+.scol{
+  border-left: 3px solid royalblue;
+  text-indent: 0.5em;
+  color: rgb(25, 111, 223);
+  font-weight: bold;
+}
+.my_school{
+  width: 100%;
+  height: 200rpx;
+  margin: 20rpx 0;
+  background-color: rgba(230, 230, 230, 0.2);
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+}
+.lef_sc{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-left: 20rpx;
+}
+.lef_sc image{
+  width: 100%;
+  height: 100%;
+}
+.ref_sc{
+  margin-left: 20rpx;
+}
+.sc_name{
+  font-size: 29rpx;
+  font-weight: bold;
+}
+.sc_add{
+  font-size: 25rpx;
+  color: gray;
+}
+.share{
+  position: fixed;
+  bottom: 5%;
+  background-color: royalblue;
+  font-weight: 500;
+  color: white;
+}
+button:not([size=mini]) {
+  width: 90%;
+}

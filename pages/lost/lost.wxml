@@ -1,0 +1,133 @@
+<!--pages/lost/lost.wxml-->
+<view class="container">
+  <view class="header_top">
+    <view class="fh" bindtap="getinde" style="top: {{titleBottom}}px;">
+      <image src="../../images/fh.png" mode="aspectFill" />
+    </view>
+    <view class="banner">
+      <image src="https://cclove.club/xcx/banner.png" mode="aspectFill  " />
+    </view>
+  </view>
+  <view class="content">
+    <view class="tab">
+      <view class="tab_item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">拾取</view>
+      <view class="tab_item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">丢失</view>
+    </view>
+    <swiper class="swiper" current="{{currentTab}}" duration="300" bindchange="swiperTab">
+      <swiper-item>
+        <view class="cont">
+          <view class="card_">
+            <view class="zwnr" wx:if="{{error}}">
+              <image src="https://cclove.club/xcx/zwnr.png" mode="widthFix" />
+              <text>暂无内容</text>
+            </view>
+            <view class="card_box" wx:for="{{card}}" wx:key="this">
+              <view class="user_info">
+                <view class="left_userinfo" bindtap="get_user">
+                  <image src="{{item.userpic}}" mode="aspectFit" />
+                </view>
+                <view class="right_usertxt">
+                  <view class="top_user">
+                    <view class="username">
+                      {{item.username}}
+                    </view>
+                    <view class="qx" wx:if="{{item.qx!=null}}">
+                      {{item.qx}}
+                    </view>
+                  </view>
+                  <view class="card_timer">
+                    发布时间：{{item.timer}}
+                  </view>
+                </view>
+              </view>
+              <view class="con_box">
+                <view class="cont_text">
+                  {{item.content}}
+                </view>
+                <view class="card_pic">
+                  <image wx:for="{{item.card_pic}}" data-list="{{item.card_pic}}" wx:for-item="pic" bindtap="prev" style="width: 100%;" src="{{pic.pic}}" wx:key="id" data-src="{{pic.pic}}" mode="aspectFit" />
+                </view>
+              </view>
+              <view class="card_more">
+                <view class="lef_more">
+                  共{{item.pl.length}}条评论
+                </view>
+                <view class="ref_more">
+                  <view class="item_icona">
+                    <image src="../../images/icon/love.png" mode="" />
+                    {{item.dz}}
+                  </view>
+                  <view class="item_icona">
+                    <image src="../../images/icon/pl.png" mode="" />
+                    {{item.pl.length}}
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="cont">
+          <view class="card_">
+            <view class="zwnr" wx:if="{{error}}">
+              <image src="https://cclove.club/xcx/zwnr.png" mode="widthFix" />
+              <text>暂无内容</text>
+            </view>
+            <view class="card_box" wx:for="{{ds}}" wx:key="this">
+              <view class="user_info">
+                <view class="left_userinfo" bindtap="get_user">
+                  <image src="{{item.userpic}}" mode="aspectFit" />
+                </view>
+                <view class="right_usertxt">
+                  <view class="top_user">
+                    <view class="username">
+                      {{item.username}}
+                    </view>
+                    <view class="qx" wx:if="{{item.qx!=null}}">
+                      {{item.qx}}
+                    </view>
+                  </view>
+                  <view class="card_timer">
+                    发布时间：{{item.timer}}
+                  </view>
+                </view>
+              </view>
+              <view class="con_box">
+                <view class="cont_text">
+                  {{item.content}}
+                </view>
+                <view class="card_pic">
+                  <image wx:for="{{item.card_pic}}" data-list="{{item.card_pic}}" wx:for-item="pic" bindtap="prev" style="width: 100%;" src="{{pic.pic}}" wx:key="id" data-src="{{pic.pic}}" mode="aspectFit" />
+                </view>
+              </view>
+              <view class="card_more">
+                <view class="lef_more">
+                  共{{item.pl.length}}条评论
+                </view>
+                <view class="ref_more">
+                  <view class="item_icona">
+                    <image src="../../images/icon/love.png" mode="" />
+                    {{item.dz}}
+                  </view>
+                  <view class="item_icona">
+                    <image src="../../images/icon/pl.png" mode="" />
+                    {{item.pl.length}}
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="d_fomr">
+    <view class="ad_top" bindtap="goTop" wx:if="{{adtop}}">
+      <image src="../../images/icon/adtop.png" mode="" />
+    </view>
+    <view class="ad_add">
+      <image src="../../images/icon/add.png" mode="" />
+    </view>
+  </view>
+</view>
